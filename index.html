@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="https://vjs.zencdn.net/7.8.2/video-js.css" rel="stylesheet" />
+      <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+      <link href="css/d3RangeSlider.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+      <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+      <script src="js/d3RangeSlider.js"></script>
+      <!-- Range slider style -->
+   </head>
+   <body>
+      <div class="video_container">
+         <video
+            id="video_player"
+            class="video-js vjs-big-play-centered"
+            controls
+            preload="auto"
+            width="640"
+            height="264"
+            muted="muted"
+            >
+            <source src="media/source1.mp4" id="mp4source" />
+            <p class="vjs-no-js">
+               To view this video please enable JavaScript, and consider upgrading to a
+               web browser that
+               <a href="https://videojs.com/html5-video-support/" target="_blank"
+                  >supports HTML5 video</a>
+            </p>
+         </video>
+         <div id="additional_video">
+         </div>
+         <div class="buttons">
+            <button class="arrow left previous">
+               <svg width="30px" height="50px" viewBox="0 0 50 80" xml:space="preserve">
+                  <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
+                     45.63,75.8 0.375,38.087 45.63,0.375 "/>
+               </svg>
+            </button>
+            <button class="arrow right next">
+               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="50px" viewBox="0 0 50 80" xml:space="preserve">
+                  <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
+                     0.375,0.375 45.63,38.087 0.375,75.8 "/>
+               </svg>
+            </button>
+         </div>
+      </div>
+      <div id="meta"></div>
+      <div id="annotated_bar">
+      </div>
+      <div class="zoom-out-bar">
+         <progress id="zoom-out-bar" value="0" min="0"></progress>
+      </div>
+      <div class="zoom-in-progress">
+         <input type="range" min="0" value="0" class="rangeslider" id="zoom-in-progress">
+      </div>
+      <div class="slider-outer-container">
+         <div id="slider-container"></div>
+      </div>
+      <div id='hoverData'>
+      </div>
+      <div id="range-label"></div>
+      <style data="slide-width" type="text/css">
+      </style>
+      <script src="https://vjs.zencdn.net/7.8.2/video.min.js"></script>
+      <script src="js/config.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>
